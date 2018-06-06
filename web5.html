@@ -1,0 +1,54 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>第五次作业</title>
+	<link rel="stylesheet" href="css/style3.css">
+<style type="text/css">
+</style>
+</head>
+<body>
+	<li>
+	   		 <a href="img/1.jpg" title="大" >
+	   		 	 <img class="img1"  src="img/1.jpg" alt="大">
+	   		 </a>
+	   		
+	  	</li>
+	 	 <li>
+	    		<a href="img/2.jpg" title="鱼" >
+	    		<img class="img1"  src="img/2.jpg" alt="鱼">
+	    		</a>
+	  	</li>
+	  	<li>
+	    		<a href="img/3.jpg" title="海" >
+			<img class="img1"  src="img/3.jpg" alt="海">
+	    		</a>
+	  	</li>
+	  	<li>
+	    		<a href="img/4.jpg" title="棠">
+			<img class="img1"  src="img/4.jpg" alt="棠">
+	    		</a>
+	  	</li>
+	</ul>
+	<img id="placeholder" style="width:500px;height=:400px;margin-left:300px;;margin-top:100px;" src="img/5.jpg" alt="my image gallery"/>
+		<script >
+		function showPic(whichPic){
+				var a=whichPic.getAttribute("href");
+				var b=document.getElementById("placeholder");
+				b.setAttribute("src",a);
+			}
+		function pre(){
+			var links=document.getElementsByTagName("a");
+			for(var i=0;i<links.length;i++){
+				links[i].onclick=function(){
+					showPic(this);
+					return false;
+
+					}
+					
+				}
+			}
+			pre();
+		</script>
+			
+</body>
+</html>
